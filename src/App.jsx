@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Bio from "./components/Bio";
 import StatCard from "./components/StatCard";
 import RepoCard from "./components/RepoCard";
+import Footer from "./components/Footer";
 function App() {
   const [followers, setFollowers] = useState(0);
   const [rate, setRate] = useState(500);
@@ -61,10 +62,7 @@ function App() {
         <RepoCard name="todo-api" description="A small REST API for a to-do list." language="Java" commits={31} />
         <RepoCard name="dotfiles" description="My terminal and editor settings." language="Shell" commits={12} />
       </main>
-
-      <footer className="mt-auto bg-[#222222] px-20 py-6 text-center text-xl text-[#FAF3E1]">
-        <p>Every profile on DevHub is public.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
