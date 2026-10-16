@@ -2,7 +2,7 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Bio from "./components/Bio";
 import StatCard from "./components/StatCard";
-import RepoCard from "./components/RepoCard";
+import Repositories from "./components/Repositories";
 import Footer from "./components/Footer";
 function App() {
   const [followers, setFollowers] = useState(0);
@@ -56,12 +56,7 @@ function App() {
           </button>
         </div>
       </div>
-
-      <main className="grid grid-cols-3 gap-8 px-20 pt-8">
-        <RepoCard name="portfolio" description="My personal page built with React." language="JavaScript" commits={48} />
-        <RepoCard name="todo-api" description="A small REST API for a to-do list." language="Java" commits={31} />
-        <RepoCard name="dotfiles" description="My terminal and editor settings." language="Shell" commits={12} />
-      </main>
+      <Repositories />
       <Footer />
     </div>
   );
