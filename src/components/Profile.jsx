@@ -2,7 +2,7 @@ import Bio from "./Bio";
 import StatCard from "./StatCard";
 import { useState } from "react";
 import Hire from "./Hire";
-import Control from "./Control";
+import Controls from "./Controls";
 
 function Profile() {
   const [followers, setFollowers] = useState(0);
@@ -31,7 +31,7 @@ function Profile() {
         </div>
       </div>
 
-      <Control handleFollow={handleFollow} handleAddRate={handleAddRate} handleReset={handleReset} />
+      <Controls handleFollow={handleFollow} handleAddRate={handleAddRate} handleReset={handleReset} />
     </div>
     <Hire rate={rate} />
     </>
