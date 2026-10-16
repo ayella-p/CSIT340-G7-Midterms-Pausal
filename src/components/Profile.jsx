@@ -1,6 +1,7 @@
 import Bio from "./Bio";
 import StatCard from "./StatCard";
 import { useState } from "react";
+import Hire from "./Hire";
 
 function Profile() {
   const [followers, setFollowers] = useState(0);
@@ -19,6 +20,7 @@ function Profile() {
     setRate(500);
   }
   return (
+    <>
     <div className="flex items-end justify-between bg-[#F5E7C6] px-20 py-10">
       <div>
         <Bio name="AYELLA A. PAUSAL" username="ayella-p" />
@@ -49,6 +51,8 @@ function Profile() {
         </button>
       </div>
     </div>
+    <Hire rate={rate} />
+    </>
   );
 }
 
